@@ -15,5 +15,3 @@ num_ bottles = 2 * liters
 print(liters + " liters of water or...\n")
 print("about " + num_bottles + " bottles of water.")
 
-
-#test
