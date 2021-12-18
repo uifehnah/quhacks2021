@@ -2,9 +2,8 @@
 <html lang="en">
 
 <head>
-    <!--<script>
-        let saveFile = () => {
-            
+    <script>
+        function saveFile(){
             // Get the data from each element on the form.
             const heavy = document.getElementById('heavy');
             const total = document.getElementById('total');
@@ -24,26 +23,18 @@
                 ',' + hour4.value +
                 ',' + hour3.value;
             
-            // Convert the text to BLOB.
-            const textToBLOB = new Blob([data], { type: 'text/plain' });
-            const sFileName = 'data.txt';	   // The file to save the data.
-    
-            let newLink = document.createElement("a");
-    
-            if (window.webkitURL != null) {
-                newLink.href = window.webkitURL.createObjectURL(textToBLOB);
-            }
-            else {
-                newLink.href = window.URL.createObjectURL(textToBLOB);
-                newLink.style.display = "none";
-                document.body.appendChild(newLink);
-            }
-    
-            newLink.click(); 
-            sFileName.close();
+            const fs = require('fs');
+            const content = data;
+            fs.writeFile('data.txt', content, err => {
+              if(err){
+                console.err;
+                return;
+              }
+            });
+            fs.Close();
         }
-    </script>-->
-    <!--<meta charset="UTF-8">
+    </script>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quench</title>
@@ -51,35 +42,6 @@
     <link rel="stylesheet" href="waves.css">
     <link rel="stylesheet" href="form.css">
     <script href="script.js"></script>
-    <script>
-    function WriteToFile(passForm) {
- 
-        Set fso = CreateObject("Scripting.FileSystemObject"); 
-        Set s   = fso.CreateTextFile("data.txt", True);
-     
-            var heavy = document.getElementById('heavy');
-            var total = document.getElementById('total');
-            var hour1 = document.getElementById('hour1');
-            var hour2 = document.getElementById('hour2');
-            var hour3 = document.getElementById('hour3');
-            var hour4 = document.getElementById('hour4');
-            var hour5 = document.getElementById('hour5');
-     
-            s.writeline(
-                heavy.value + ' \n ' + 
-                total.value + ' \n ' +
-                ',' + hour1.value +
-                ',' + hour2.value +
-                ',' + hour3.value + 
-                ',' + hour4.value +
-                ',' + hour3.value);
-     
-        s.Close();
-     }
-     </script>-->
-     <script>
-         
-     </script>
 </head>
 
 <body>
