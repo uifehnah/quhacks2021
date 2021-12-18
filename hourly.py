@@ -1,4 +1,3 @@
-import sys
 import plotly.express as px
 
 with open('file_path', 'r') as file:
