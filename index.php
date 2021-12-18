@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mizu</title>
     <link rel="stylesheet" href="index.css">
+    <!-- Testing-->
+    <?PHP
+        $command = escapeshellcmd('/usr/bin/python calculator.py 150 20');
+        $output = shell_exec($command);
+        echo $output;
+    ?>
 </head>
 <!--Hey! This is the original version
 of Simple CSS Waves-->
@@ -51,9 +57,10 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
 <!--Content starts-->
 <div class="content flex">
 <p></p>
+
 </div>
 <!--Content ends-->
 <body>
-    
+
 </body>
 </html>
