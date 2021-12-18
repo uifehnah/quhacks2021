@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="waves.css">
     <link rel="stylesheet" href="form.css">
+    <script>
+        function kys(){
+        var heavy = window.localStorage.getItem("heavy");
+        var total = window.localStorage.getItem("total");
+        var recwater = String(((2/3)*heavy)+12*(total/30));
+        var strings = "Based on your weight of " + heavy + ", and the fact that you exercise " + total + " minutes a day, you should drink " + recwater + " liters per day.";
+        var info = document.getElementById("info");
+        window.alert(strings);
+        }
+    </script>
 </head>
 
 <body>
@@ -37,11 +47,14 @@
             </svg>
         </div>
         <!--Waves end-->
-        <form class="login" action="graph1.html">
-            <button id="submit-button" type="submit" class="my-button" onclick="">Graph 1</button>
+        <form class="login" action="">
+            <button id="submit-button" type="submit" class="start-button" onclick="kys()" style = "font-weight: 300; margin-top: 60vh;">Water Progress</button>
         </form>
-        <form class="login" action="graph2.html">
-            <button id="submit-button" type="submit" class="my-button" onclick="">Graph 2</button>
+        <form class="login" action="remaining.html">
+            <button id="submit-button" type="submit" class="start-button" onclick="" style = "font-weight: 300; margin-top: 60vh;">Water Progress</button>
+        </form>
+        <form class="login" action="hourly.html">
+            <button id="submit-button" type="submit" class="start-button" onclick="" style = "font-weight: 300; margin-top: 60vh;">Hourly Water Intake</button>
         </form>
     </div>
 </body>
