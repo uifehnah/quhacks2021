@@ -5,10 +5,15 @@ import plotly.graph_objects as go
 with open('file_path', 'r') as file:
     data = file.read()
 
+hourly = data[someindex]
+goal = data[someindex]
+
+hourly = list(map(int,hourly.split(",")))
+
 
 labels = ['To drink','Drank']
 #some index is the index position of the result from calculation stored in the string data
-values = [data[someindex],data[someindex]]
+values = [goal - sum(hourly),sum(hourly)]
 colors = ["royalblue","darkblue"][::-1]
 
 fig = go.Figure(data=[go.Pie(labels=labels, values=values)])
