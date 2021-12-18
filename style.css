@@ -1,5 +1,7 @@
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
 :root{
 --first-color: #069C54;
 --first-color-alt: #048654;
@@ -33,18 +35,22 @@ h1 {
 
 .my-button{
   display: inline-block;
-  background-color: #069C54;
+  background-color: #1a8eec;
   color: #FFF;
   padding: .75rem 1rem;
-  border-radius: .5rem;
+  border-radius: 3rem;
   transition: .3s;
-  margin-top: 1rem;
-  border-color: #069C54;
+  margin-top: 20rem;
+  border-color: #0e3dbe;
+  width: 40vw;
+  height: 30vh;
+  font-family: 'Montserrat';
+  font-size: 10vh;
 }
 
 .my-button:hover{
-  background-color: #048654;
-  border-color: #048654;
+  background-color: #1513aa;
+  border-color: #0e57b8;
 }
 
 p {
