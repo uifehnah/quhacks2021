@@ -84,6 +84,7 @@ p {
 .login{
   width: 50vw;
   height: 50vh;
+  
 
 }
 
@@ -182,5 +183,27 @@ body {
   text-align: center;
   height: 50vh;
 
+
+}
+
+.start-button{
+  display: inline-block;
+  background-color: #1a8eec;
+  color: #FFF;
+  padding: .75rem 1rem;
+  border-radius: 3rem;
+  transition: .3s;
+  margin-top: 20rem;
+  border-color: #0e3dbe;
+  width: 40vw;
+  height: 30vh;
+  font-family: 'Quicksand';
+  font-size: 10vh;
+}
+
+.login2{
+  width: 50vw;
+  height: 50vh;
+  display: inline;
 
 }
