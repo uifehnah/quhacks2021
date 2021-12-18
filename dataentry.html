@@ -2,38 +2,6 @@
 <html lang="en">
 
 <head>
-    <script>
-        function saveFile(){
-            // Get the data from each element on the form.
-            const heavy = document.getElementById('heavy');
-            const total = document.getElementById('total');
-            const hour1 = document.getElementById('hour1');
-            const hour2 = document.getElementById('hour2');
-            const hour3 = document.getElementById('hour3');
-            const hour4 = document.getElementById('hour4');
-            const hour5 = document.getElementById('hour5');
-            
-            // This variable stores all the data.
-            let data = 
-                heavy.value + ' \n ' + 
-                total.value + ' \n ' +
-                ',' + hour1.value +
-                ',' + hour2.value +
-                ',' + hour3.value + 
-                ',' + hour4.value +
-                ',' + hour3.value;
-            
-            const fs = require('fs');
-            const content = data;
-            fs.writeFile('data.txt', content, err => {
-              if(err){
-                console.err;
-                return;
-              }
-            });
-            fs.Close();
-        }
-    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,6 +10,38 @@
     <link rel="stylesheet" href="waves.css">
     <link rel="stylesheet" href="form.css">
     <script href="script.js"></script>
+    <script>
+      function saveFile(){
+          // Get the data from each element on the form.
+          const heavy = document.getElementById('heavy');
+          const total = document.getElementById('total');
+          const hour1 = document.getElementById('hour1');
+          const hour2 = document.getElementById('hour2');
+          const hour3 = document.getElementById('hour3');
+          const hour4 = document.getElementById('hour4');
+          const hour5 = document.getElementById('hour5');
+          
+          // This variable stores all the data.
+          let data = 
+              heavy.value + ' \n ' + 
+              total.value + ' \n ' +
+              ',' + hour1.value +
+              ',' + hour2.value +
+              ',' + hour3.value + 
+              ',' + hour4.value +
+              ',' + hour3.value;
+          
+          const fs = require('fs');
+          const content = data;
+          fs.writeFile('data.txt', content, err => {
+            if(err){
+              console.err;
+              return;
+            }
+          });
+          fs.Close();
+      }
+    </script>
 </head>
 
 <body>
