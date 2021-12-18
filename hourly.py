@@ -13,4 +13,4 @@ remaining_to_drink = goal - sum(hourly)
 
 
 fig = px.line(x=list(range(1,len(hourly)+1)),y=hourly,title="Hourly Water Intake (Liters/Hour)")
-fig.write_html("test.html")
+fig.write_html("hourly.html")

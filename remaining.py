@@ -14,4 +14,4 @@ colors = ["royalblue","darkblue"][::-1]
 fig = go.Figure(data=[go.Pie(labels=labels, values=values)])
 fig.update_traces(hoverinfo='label+percent', textinfo='value', textfont_size=20,
                   marker=dict(colors=colors, line=dict(color='#000000', width=2)))
-
+fig.write_html("remaining.html")
