@@ -1,26 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
-:root{
---first-color: #069C54;
---first-color-alt: #048654;
-}
 body {
   margin:0;
   height: 100vh;
-}
-
-.button{
-  display: inline-block;
-  background-color: var(--first-color);
-  color: #FFF;
-  padding: .75rem 1rem;
-  border-radius: .5rem;
-  transition: .3s;
-}
-
-.button:hover{
-  background-color: var(--first-color-alt);
 }
 
 h1 {
@@ -32,7 +15,7 @@ h1 {
   padding-top: 4vh;
 }
 
-.my-button{
+.start-button{
   display: inline-block;
   background-color: #1a8eec;
   color: #FFF;
@@ -47,7 +30,7 @@ h1 {
   font-size: 10vh;
 }
 
-.my-button:hover{
+.start-button:hover{
   background-color: #1513aa;
   border-color: #0e57b8;
 }
@@ -186,9 +169,4 @@ body {
 ::-webkit-scrollbar {
   width: 0;  
   background: transparent;  
-}
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
 }
