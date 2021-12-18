@@ -2,84 +2,24 @@
 <html lang="en">
 
 <head>
-    <!--<script>
-        let saveFile = () => {
-            
-            // Get the data from each element on the form.
-            const heavy = document.getElementById('heavy');
-            const total = document.getElementById('total');
-            const hour1 = document.getElementById('hour1');
-            const hour2 = document.getElementById('hour2');
-            const hour3 = document.getElementById('hour3');
-            const hour4 = document.getElementById('hour4');
-            const hour5 = document.getElementById('hour5');
-            
-            // This variable stores all the data.
-            let data = 
-                heavy.value + ' \n ' + 
-                total.value + ' \n ' +
-                ',' + hour1.value +
-                ',' + hour2.value +
-                ',' + hour3.value + 
-                ',' + hour4.value +
-                ',' + hour3.value;
-            
-            // Convert the text to BLOB.
-            const textToBLOB = new Blob([data], { type: 'text/plain' });
-            const sFileName = 'data.txt';	   // The file to save the data.
-    
-            let newLink = document.createElement("a");
-    
-            if (window.webkitURL != null) {
-                newLink.href = window.webkitURL.createObjectURL(textToBLOB);
-            }
-            else {
-                newLink.href = window.URL.createObjectURL(textToBLOB);
-                newLink.style.display = "none";
-                document.body.appendChild(newLink);
-            }
-    
-            newLink.click(); 
-            sFileName.close();
-        }
-    </script>-->
-    <!--<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quench</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="waves.css">
     <link rel="stylesheet" href="form.css">
-    <script href="script.js"></script>
     <script>
-    function WriteToFile(passForm) {
- 
-        Set fso = CreateObject("Scripting.FileSystemObject"); 
-        Set s   = fso.CreateTextFile("data.txt", True);
-     
-            var heavy = document.getElementById('heavy');
-            var total = document.getElementById('total');
-            var hour1 = document.getElementById('hour1');
-            var hour2 = document.getElementById('hour2');
-            var hour3 = document.getElementById('hour3');
-            var hour4 = document.getElementById('hour4');
-            var hour5 = document.getElementById('hour5');
-     
-            s.writeline(
-                heavy.value + ' \n ' + 
-                total.value + ' \n ' +
-                ',' + hour1.value +
-                ',' + hour2.value +
-                ',' + hour3.value + 
-                ',' + hour4.value +
-                ',' + hour3.value);
-     
-        s.Close();
-     }
-     </script>-->
-     <script>
-         
-     </script>
+        function setLocal(){
+        window.localStorage.setItem("heavy",document.getElementById("heavy").value);
+        window.localStorage.setItem("total",document.getElementById("total").value);
+        window.localStorage.setItem("hour1",document.getElementById("hour1").value);
+        window.localStorage.setItem("hour2",document.getElementById("hour2").value);
+        window.localStorage.setItem("hour3",document.getElementById("hour3").value);
+        window.localStorage.setItem("hour4",document.getElementById("hour4").value);
+        window.localStorage.setItem("hour5",document.getElementById("hour5").value);
+        }
+    </script>
 </head>
 
 <body>
@@ -98,10 +38,10 @@
         <h1>Data Entry</h1>
       </div>
       <div class="form-content">
-        <form onsubmit="saveFile()">
+        <form onsubmit="setLocal()">
           <div class="form-group">
             <label for="weight">Weight</label>
-            <input type="number" id="heavy" name="heavy" required="required"/>
+            <input type="text" id="heavy" name="heavy" required="required"/>
           </div>
           <div class="form-group">
             <label for="minutuesOfExercise">Total Minutes of Exercise</label>
