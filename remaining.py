@@ -2,13 +2,16 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 
-with open('file_path', 'r') as file:
-    data = file.read()
+# with open('file_path', 'r') as file:
+#     data = file.read()
 
-hourly = data[someindex]
-goal = data[someindex]
+# hourly = data[someindex]
+# goal = data[someindex]
 
-hourly = list(map(int,hourly.split(",")))
+goal = 3.5
+hourly = '0.3,0.25,0.6,0.1,0.4'
+
+hourly = list(map(float,hourly.split(",")))
 
 
 labels = ['To drink','Drank']
